@@ -36,22 +36,23 @@ class SplashScreen extends StatefulWidget {
 }
 
 class _SplashScreenState extends State<SplashScreen> {
-  
-  void initState(){
+  void initState() {
     super.initState();
-    Timer(Duration(seconds :4),
-        ()=>Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>home())));
+    Timer(
+        Duration(seconds: 4),
+        () => Navigator.pushReplacement(
+            context, MaterialPageRoute(builder: (context) => home())));
   }
+
   @override
   Widget build(BuildContext context) {
     final h = MediaQuery.of(context).size.height;
     final w = MediaQuery.of(context).size.width;
     return Container(
-      height: h/5,
-      width: w/3,
-      color : Colors.white,
+      height: h / 5,
+      width: w / 5,
+      color: Colors.white,
       child: Image.asset('assets/vanakkam.gif'),
     );
   }
 }
-

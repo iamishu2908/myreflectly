@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:myreflectly/constants.dart';
+import 'package:myreflectly/home.dart';
 import 'package:myreflectly/themescreen.dart';
 
 class name extends StatefulWidget {
@@ -31,14 +32,17 @@ class _nameState extends State<name> {
             BackButton(
                 color: Colors.grey[300],
                 onPressed: () {
-                  Navigator.pop(context);
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => home()),
+                  );
                 }),
             Hero(
               tag: 'dash',
               child: Container(
                   width: w * 0.75,
                   height: 70,
-                  child: Image.asset('assets/img1.jpeg')),
+                  child: Image.asset('assets/vanakkam.gif')),
             ),
           ]),
           SizedBox(

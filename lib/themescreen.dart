@@ -1,24 +1,38 @@
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'constants.dart';
+import 'namescreen/namescreen.dart';
 
 class themes extends StatefulWidget {
   final String Name;
 
-
-  const themes({Key? key, required this.Name,}) : super(key: key);
+  const themes({
+    Key? key,
+    required this.Name,
+  }) : super(key: key);
 
   @override
   State<themes> createState() => _themesState();
 }
 
 class _themesState extends State<themes> {
-
-
   int i = 0;
-  var gradlst = [gradyellow, gradorange, gradblue, gradpurple,gradpink,gradblack];
-  var clrlst = [Colors.yellow,Colors.orange,Colors.blue,Colors.purple,Colors.pink,Colors.black];
+  var gradlst = [
+    gradyellow,
+    gradorange,
+    gradblue,
+    gradpurple,
+    gradpink,
+    gradblack
+  ];
+  var clrlst = [
+    Colors.yellow,
+    Colors.orange,
+    Colors.blue,
+    Colors.purple,
+    Colors.pink,
+    Colors.black
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -27,12 +41,11 @@ class _themesState extends State<themes> {
 
     void changecolour() {
       setState(() {
-        grad=gradlst[i];
+        grad = gradlst[i];
         primaryc = clrlst[i];
       });
       print('worked');
     }
-
 
     return Material(
       color: Colors.transparent,
@@ -46,14 +59,17 @@ class _themesState extends State<themes> {
               BackButton(
                   color: Colors.grey[300],
                   onPressed: () {
-                    Navigator.pop(context);
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => name()),
+                    );
                   }),
               Hero(
                 tag: 'dash',
                 child: Container(
                     width: w * 0.75,
                     height: 70,
-                    child: Image.asset('assets/img1.jpeg')),
+                    child: Image.asset('assets/vanakkam.gif')),
               ),
             ]),
             SizedBox(
@@ -72,7 +88,8 @@ class _themesState extends State<themes> {
             SizedBox(
               height: 60,
             ),
-            Container(color: Colors.transparent,
+            Container(
+              color: Colors.transparent,
               height: 300,
               child: ListView(
                 scrollDirection: Axis.horizontal,
@@ -157,7 +174,6 @@ class _themesState extends State<themes> {
                                 height: 80.0,
                                 width: 80.0,
                               )))),
-
                   Container(
                       width: 125,
                       child: Center(
@@ -196,7 +212,6 @@ class _themesState extends State<themes> {
                                 height: 80.0,
                                 width: 80.0,
                               )))),
-
                 ],
               ),
             ),

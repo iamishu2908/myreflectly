@@ -20,13 +20,13 @@ class _homeState extends State<home> {
         child: Center(
           child: Column(
             children: [
-              Spacer(flex:2),
+              Spacer(flex: 2),
               Hero(
                 tag: 'dash',
                 child: Container(
-                    height: 90, child: Image.asset('assets/img1.jpeg')),
+                    height: 90, child: Image.asset('assets/vanakkam.gif')),
               ),
-              SizedBox(height:20),
+              SizedBox(height: 20),
               Container(
                   child: Text(
                 'Hi there,',
@@ -51,7 +51,7 @@ class _homeState extends State<home> {
               )),
               Spacer(flex: 3),
               SizedBox(
-                width: w*0.7,
+                width: w * 0.7,
                 height: 60,
                 child: SubmitButton(
                     title: 'HI, REFLECTLY!',
@@ -60,8 +60,7 @@ class _homeState extends State<home> {
                         context,
                         MaterialPageRoute(builder: (context) => name()),
                       );
-                    })
-                ,
+                    }),
               ),
               Container(
                 margin: EdgeInsets.all(20.0),
